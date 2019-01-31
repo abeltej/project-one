@@ -1,5 +1,5 @@
 # project-one
 
 ### Team Members
-#### Abel T
+#### Abel T, Daniel M
 
