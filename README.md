@@ -1,6 +1,5 @@
 # project-one
 
 ### Team Members
-#### Tucker
+#### Abel T, Daniel M
 
-Alec
