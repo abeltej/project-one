@@ -9,10 +9,13 @@ Team Members: ADA
 
 Project Descriptions: A website that recommends you beer based on your preferences as well as listen to beer jams.  
 
-APIs: BreweryDB. Spotify 
+APIs: Youtube. Spotify 
 
 Breakdown of Tasks:
 
 Daniel: Spotify API 
-Abel: BreweryDB API 
+Abel: Youtube API 
 Alec: Help with both API / Head the front end section
+
+Youtube API key
+AIzaSyDlDeXz6hox05IplaBivh2Owr3tnDzfFaE
