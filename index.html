@@ -1,12 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+
 </head>
+
 <body>
-    
+    <header>
+        <div class="jumbotron jumbotron-fluid" id="title">
+            <div class="container">
+                <h1 class="display-4">Beer Jams</h1>
+                <p class="lead">Search simultaneously for Artist info and video.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container width:800px">
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <i class="fas fa-search" id="icon"></i>
+                    <input id="search" type="text" class="form-control input-lg" placeholder="Artist">
+                </div>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col" id="vidWindow">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col" id="cBlockTwo">
+                    </div>
+                </div>
+            </div>
+            <div class="col" id="cBlockOne">
+
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
