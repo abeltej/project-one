@@ -3,10 +3,10 @@
     background-size: cover;
   }
 #input{
-    /* position: relative;
+    position: relative;
     left: 20px;
-    top: -10px; */
-    /* width: 500px */
+    top: -10px;
+    width: 500px; 
 }
 #icon{
     position: relative;
@@ -14,5 +14,5 @@
     top: 10px;
 }
 #search{
-    /* position: absolute; */
-}
+    position: absolute;
+} 
