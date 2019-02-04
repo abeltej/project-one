@@ -1,34 +1,18 @@
 .jumbotron {
-    /* background-image: url("/Users/user/Desktop/coolstuff/572528.jpg"); */
-    background-size: 2600px 500px;
-    padding: 100px;
-
+    background-image: url("../img/jumbotron_bg.jpg");
+    background-size: cover;
   }
-#search{
-    position: relative;
+#input{
+    /* position: relative;
     left: 20px;
-    top: -10px;
+    top: -10px; */
     /* width: 500px */
 }
 #icon{
-    position: absolute;
-    float: left;
+    position: relative;
+    float: right;
+    top: 10px;
 }
-
-#submit{
-
-    margin-left: 2%;
-
-}
-
-.col   {
-
-    margin-bottom: 30px;
-}
-
-h3{
-
-font-size: 20px;
-margin-top: 20px;
-
+#search{
+    /* position: absolute; */
 }
