@@ -1,6 +1,8 @@
 .jumbotron {
-    background-image: url("../img/jumbotron_bg.jpg");
-    background-size: cover;
+    /* background-image: url("/Users/user/Desktop/coolstuff/572528.jpg"); */
+    background-size: 2600px 500px;
+    padding: 100px;
+
   }
 #search{
     position: relative;
@@ -11,4 +13,22 @@
 #icon{
     position: absolute;
     float: left;
+}
+
+#submit{
+
+    margin-left: 2%;
+
+}
+
+.col   {
+
+    margin-bottom: 30px;
+}
+
+h3{
+
+font-size: 20px;
+margin-top: 20px;
+
 }
