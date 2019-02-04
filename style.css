@@ -2,17 +2,21 @@
     background-image: url("../img/jumbotron_bg.jpg");
     background-size: cover;
   }
-#input{
-    position: relative;
-    left: 20px;
-    top: -10px;
-    width: 500px; 
-}
+
 #icon{
     position: relative;
     float: right;
     top: 10px;
 }
-#search{
-    position: absolute;
-} 
+
+.col   {
+
+    margin-bottom: 30px;
+}
+
+h3{
+
+font-size: 20px;
+margin-top: 20px;
+
+}
