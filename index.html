@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-            crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-            crossorigin="anonymous">
-    
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+        crossorigin="anonymous">
+
+</head>
 
 <body>
     <header>
@@ -34,7 +34,7 @@
                 </div>
             </div>
         </form>
-        
+
         <div class="row">
             <div class="col">
                 <div class="row">
@@ -43,7 +43,7 @@
                 </div>
                 <div class="row">
                     <div class="col" id="cBlockTwo">
-                            <div id="artist-div"></div>
+                        <div id="artist-div"></div>
                     </div>
                 </div>
             </div>
@@ -58,39 +58,6 @@
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script>
-  
-  function artistInfo(artists) {
-
-    var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artists + "&api_key=24b4aa93fb9c29dedfbb4977c6bb8cf4&format=json"
-    
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    }).then(function(response) {
-            console.log(response);
-      var artistName = $("<h1>").text(response.artist.name);
-      var artistURL = $("<a>").attr(response.artist).append(artistName);
-      var artistBio = $("<h3>").text(response.artist.bio.summary);
-      var artistImage = $("<img>").attr("src", response.artist.image[3]["#text"]);
-      var upcomingEvents = $("<h4>").text(response.artist.ontour + " Upcoming Events");
-      var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates"); 
-
-      // Empty the contents of the artist-div, append the new artist content
-      $("#artist-div").empty();
-      $("#artist-div").append(artistURL, artistImage, artistBio, upcomingEvents,goToArtist);
-    });
-  }
-
-  // Event handler for user clicking the select-artist button
-  $("#submit").on("click", function(event) {
-    event.preventDefault();
-    var inputArtist = $("#search").val().trim();
-
-    artistInfo(inputArtist);
-  
-});
-
-</script>
+<script type="text/javascript" src="document.js"></script>
 
 </html>
