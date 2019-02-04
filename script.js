@@ -1,31 +1,31 @@
 
 
-var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&type=video&videoDefinition=high&videoEmbeddable=true&key=AIzaSyDlDeXz6hox05IplaBivh2Owr3tnDzfFaE";
+// var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&type=video&videoDefinition=high&videoEmbeddable=true&key=AIzaSyDlDeXz6hox05IplaBivh2Owr3tnDzfFaE";
 
-// .on("click") function associated with the Search Button
-$(".btn").on("click", function (event) {
-  // This line allows us to take advantage of the HTML "submit" property
-  // This way we can hit enter on the keyboard and it registers the search
-  // (in addition to clicks). Prevents the page from reloading on form submit.
-  event.preventDefault();
+// // .on("click") function associated with the Search Button
+// $(".btn").on("click", function(event) {
+//   // This line allows us to take advantage of the HTML "submit" property
+//   // This way we can hit enter on the keyboard and it registers the search
+//   // (in addition to clicks). Prevents the page from reloading on form submit.
+//   event.preventDefault();
 
-  // Empty the region associated with the articles
-  clear();
+//   // Empty the region associated with the articles
+//   clear();
 
-  // Make the AJAX request to the API - GETs the JSON data at the queryURL.
-  // The data then gets passed as an argument to the updatePage function
+//   // Make the AJAX request to the API - GETs the JSON data at the queryURL.
+//   // The data then gets passed as an argument to the updatePage function
 
-  $.ajax({
-    url: queryURL,
-    method: "GET"
-  }).then(function (response) {
-    console.log(response)
-  }
-  )
-});
+//   $.ajax({
+//     url: queryURL,
+//     method: "GET"
+//   }).then(function(response){
+//       console.log(response)
+//   }
+//   )
+// });
 
-//  .on("click") function associated with the clear button
-$("#clear-all").on("click", clear);
+// //  .on("click") function associated with the clear button
+// $("#clear-all").on("click", clear);
 
 
 function artistInfo(artists) {
@@ -45,8 +45,8 @@ function artistInfo(artists) {
     var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
 
     // Empty the contents of the artist-div, append the new artist content
-    $("#artist-div").empty();
-    $("#artist-div").append(artistURL, artistImage, artistBio, upcomingEvents, goToArtist);
+    $("#cBlockTwo").empty();
+    $("#cBlockTwo").append(artistURL, artistImage, artistBio, upcomingEvents, goToArtist);
   });
 }
 
@@ -70,24 +70,18 @@ function concertInfo(artists) {
   url: queryURL,
   async: true,
   dataType: "json",
-    success: function (json) {
-      console.log(json);
-      // Parse the response.
-      // Do other things.
-    },
-    error: function (xhr, status, err) {
-      // This time, we do not end up here!
-    }
+    
   }).then(function (response) {
     console.log(response);
     $("#cBlockOne").empty();
 
-    for (var i = 0; i < ressponse._embedded.events.length; i++) {
-    
-    var eventName = $("<h1>").text(response._embedded.events.name);
-    var eventURL = $("<a>").attr(response._embedded.events.url).append(artistName);
-    var eventDates = $("<h4>").text(response._embedded.dates + " Upcoming Events");
-    var eventCity = $("h4").text((response._embedded.events._embedded.venues.city));
+    for (var i = 0; i < response._embedded.events.length; i++) {
+      console.log("loop")
+     
+    var eventName = $("<h2>").text(response._embedded.events[i].name);
+    var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets");
+    var eventDates = $("<h4>").text(response._embedded.events[i].dates.start.localDate);
+    var eventCity = $("<h4>").text(response._embedded.events[i]._embedded.venues[0].city.name);
     
     
     $("#cBlockOne").append(eventName, eventURL, eventDates, eventCity);
