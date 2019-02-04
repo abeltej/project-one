@@ -47,6 +47,8 @@ function artistInfo(artists) {
     // Empty the contents of the artist-div, append the new artist content
     $("#artist-div").empty();
     $("#artist-div").append(artistURL, artistImage, artistBio, upcomingEvents, goToArtist);
+
+
   });
 }
 
