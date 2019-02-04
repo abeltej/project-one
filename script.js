@@ -53,9 +53,9 @@ function artistInfo(artists) {
 // Event handler for user clicking the select-artist button
 $("#submit").on("click", function(event) {
   event.preventDefault();
-  var inputArtist = $("#search").val().trim();
+  var art = $("#search").val().trim();
 
-  artistInfo(inputArtist);
+  artistInfo(art);
 
 });
 
