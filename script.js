@@ -45,8 +45,8 @@ function artistInfo(artists) {
     var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
 
     // Empty the contents of the artist-div, append the new artist content
-    $("#artist-div").empty();
-    $("#artist-div").append(artistURL, artistImage, artistBio, upcomingEvents, goToArtist);
+    $("#cBlockTwo").empty();
+    $("#cBlockTwo").append(artistURL, artistImage, artistBio, upcomingEvents, goToArtist);
   });
 }
 
@@ -56,8 +56,36 @@ $("#submit").on("click", function (event) {
   var inputArtist = $("#search").val().trim();
 
   artistInfo(inputArtist);
-
+  concertInfo(inputArtist)
 });
 
 
+function concertInfo(artists) {
+
+  var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?keyword=" + artists + "&apikey=JRYkzb07x4RvvpOyhVRJUcNJnlRoMffq"
+
+
+  $.ajax({
+    type: "GET",
+  url: queryURL,
+  async: true,
+  dataType: "json",
+    
+  }).then(function (response) {
+    console.log(response);
+    $("#cBlockOne").empty();
+
+    for (var i = 0; i < response._embedded.events.length; i++) {
+      console.log("loop")
+     
+    var eventName = $("<h2>").text(response._embedded.events[i].name);
+    var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets");
+    var eventDates = $("<h4>").text(response._embedded.events[i].dates.start.localDate);
+    var eventCity = $("<h4>").text(response._embedded.events[i]._embedded.venues[0].city.name);
+    
+    
+    $("#cBlockOne").append(eventName, eventURL, eventDates, eventCity);
+    }
+  });
+}
 
