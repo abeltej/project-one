@@ -40,6 +40,9 @@ $("#submit").on("click", function (event) {
   event.preventDefault();
   var inputArtist = $("#search").val().trim();
 
+  
+
+
 
   youtubeArtist(inputArtist);
 
