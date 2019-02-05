@@ -103,7 +103,7 @@ function concertInfo(artists) {
     console.log(response);
     $("#cBlockOne").empty();
 
-    for (var i = 0; i++ < 5;) {
+    for (var i = 0; i++ < 7;) {
       console.log("loop")
 
       var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);
