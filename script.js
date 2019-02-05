@@ -33,6 +33,9 @@ function youtubeArtist(keyword) {
   });
 }
 
+  
+
+
 
 // $("#vidWindow").empty();
 // $("#vidWindow").append(str);
@@ -55,12 +58,12 @@ function artistInfo(artists) {
     var artistURL = $("<a>").attr(response.artist).append(artistName);
     var artistBio = $("<h3>").text(response.artist.bio.summary);
     var artistImage = $("<img>").attr("src", response.artist.image[3]["#text"]);
-    var upcomingEvents = $("<h4>").text(response.artist.ontour + " Upcoming Events");
-    var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
+    // var upcomingEvents = $("<h4>").text(response.artist.ontour + " Upcoming Events");
+    // var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
 
     // Empty the contents of the artist-div, append the new artist content
     $("#cBlockTwo").empty();
-    $("#cBlockTwo").append(artistURL, artistImage, artistBio, upcomingEvents, goToArtist);
+    $("#cBlockTwo").append(artistURL, artistImage, artistBio);
   });
 }
 
@@ -99,7 +102,7 @@ function concertInfo(artists) {
     console.log(response);
     $("#cBlockOne").empty();
 
-    for (var i = 0; i < response._embedded.events.length; i++) {
+    for (var i = 0; i++ < 7;) {
       console.log("loop")
 
       var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);

@@ -1,27 +1,31 @@
 .jumbotron {
     background-image: url("headphone-silhouette-27463-1920x1200.jpg");
-    background-size: cover;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    font-display: bold;
+    background-size: 800%;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
   }
 
 body{
 
     background-image: url("headphone-silhouette-27463-1920x1200.jpg");
-    background-size: cover;
+    background-size: 125%;
+    font-family: Arial, Helvetica, sans-serif;
 
   }
 
   .jumbotron h1{
 
     text-align: center;
+    font-size: 35px;
+    font-weight: bold;
 
   }
 
   .lead {
 
     text-align: center;
+    font-size: 25px;
+    font-weight: bold;
 
   }
 
@@ -55,4 +59,27 @@ margin-bottom: 8px;
 
 .spacerDiv{
     margin-bottom: 30px;
+}
+
+.vidWindow {
+    align-content: center;
+    margin-left: 100px;
+
+}
+
+iframe {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -moz-box-shadow: 4px 4px 14px #000;
+    -webkit-box-shadow: 4px 4px 14px #000;
+    box-shadow: 4px 4px 14px #000;
+   
+    } 
+
+img {
+    float: left;
+    /* display: inline-block; */
 }
