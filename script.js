@@ -1,3 +1,14 @@
+$(document).ready(function() {
+
+  $('.vidWindow').hide();
+
+  $('#submit').click(function() {
+
+      $('.vidWindow').show();
+
+  });
+});
+
 
 
 function youtubeArtist(keyword) {
@@ -21,7 +32,7 @@ function youtubeArtist(keyword) {
     // console.log(response.items[0].id);
 
     // Empty the contents of the artist-div, append the new artist content
-    $("#video-div").empty();
+    // $("#video-div").empty();
     // $("#video-div").append(str);
   });
 }

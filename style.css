@@ -22,14 +22,12 @@
     top: 10px;
 }
 
-.row1   {
-
+#cBlockTwo   {
     background-color: whitesmoke;
     
 }
 
 h3{
-
 font-size: 20px;
 margin-top: 20px;
 
@@ -41,7 +39,10 @@ margin-bottom: 8px;
 
 }
 #ik_player_iframe  {
-
     margin-left: 70px;
     margin-top: 20px;
+}
+
+.spacerDiv{
+    margin-bottom: 30px;
 }
