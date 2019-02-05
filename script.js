@@ -1,12 +1,8 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
   $('.vidWindow').hide();
 
-  $('#submit').click(function() {
-
-      $('.vidWindow').show();
-
-  });
+ 
 });
 
 
@@ -22,7 +18,7 @@ function youtubeArtist(keyword) {
     console.log(response);
     // var videoURl = response.items[0].id.videoId;
     // var newVideo = $("<iframe>").attr('src', videoURL)
-  
+
     console.log(response.items[0].snippet.title);
 
     var videoId = response.items[0].id.videoId;
@@ -36,14 +32,7 @@ function youtubeArtist(keyword) {
     // $("#video-div").append(str);
   });
 }
-$("#submit").on("click", function (event) {
-  event.preventDefault();
-  var inputArtist = $("#search").val().trim();
 
-
-  youtubeArtist(inputArtist);
-
-});
 
 // $("#vidWindow").empty();
 // $("#vidWindow").append(str);
@@ -80,8 +69,18 @@ $("#submit").on("click", function (event) {
   event.preventDefault();
   var inputArtist = $("#search").val().trim();
 
-  artistInfo(inputArtist);
-  concertInfo(inputArtist)
+  var validation = validator.isEmpty(inputArtist);
+
+  if (validation === false) {
+    $('.vidWindow').show();
+    artistInfo(inputArtist);
+    concertInfo(inputArtist);
+    youtubeArtist(inputArtist);
+    
+    console.log("true");
+  }
+
+
 });
 
 
