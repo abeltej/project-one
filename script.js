@@ -81,24 +81,23 @@ function concertInfo(artists) {
 
   $.ajax({
     type: "GET",
-  url: queryURL,
-  async: true,
-  dataType: "json",
-    
+    url: queryURL,
+    async: true,
+    dataType: "json",
+
   }).then(function (response) {
     console.log(response);
     $("#cBlockOne").empty();
 
     for (var i = 0; i < response._embedded.events.length; i++) {
       console.log("loop")
-     
-    var eventName = $("<h2>").text(response._embedded.events[i].name);
-    var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets");
-    var eventDates = $("<h4>").text(response._embedded.events[i].dates.start.localDate);
-    var eventCity = $("<h4>").text(response._embedded.events[i]._embedded.venues[0].city.name);
-    
-    
-    $("#cBlockOne").append(eventName, eventURL, eventDates, eventCity);
+
+      var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);
+      var eventDates = $("<h6>").text(response._embedded.events[i].dates.start.localDate);
+      var eventName = $("<h6>").text(response._embedded.events[i].name);
+      var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets & Info");
+      var eventDiv = $("<div>").appendTo("#cBlockOne").append(eventCity, eventDates, eventName, eventURL);
+      $(eventDiv).attr("class", "border border-dark eventDiv text-center");
     }
   });
 }
