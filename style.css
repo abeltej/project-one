@@ -1,13 +1,29 @@
 .jumbotron {
-    background-image: url("/Users/user/Desktop/pexels-photo-1100538.jpeg");
+    background-image: url("headphone-silhouette-27463-1920x1200.jpg");
     background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-display: bold;
   }
 
-  /* body{
+  body{
 
-    background-image: url("//Users/user/Desktop/pexels-photo-1100538.jpeg");
+    background-image: url("headphone-silhouette-27463-1920x1200.jpg");
+    background-size: cover;
 
-  } */
+  }
+
+  .jumbotron h1{
+
+    text-align: center;
+
+  }
+
+  .lead {
+
+    text-align: center;
+
+  }
 
 #icon{
     position: relative;
@@ -15,15 +31,16 @@
     top: 10px;
 }
 
-#cBlockTwo   {
-    background-color: whitesmoke;
-    
-}
 
 h3{
 font-size: 20px;
 margin-top: 20px;
 
+}
+
+#search {
+
+    margin: auto;
 }
 
 .eventDiv{
