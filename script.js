@@ -44,7 +44,7 @@ $("#submit").on("click", function (event) {
 
 function artistInfo(artists) {
 
-  var queryURL = "http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artists + "&api_key=24b4aa93fb9c29dedfbb4977c6bb8cf4&format=json"
+  var queryURL = "https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=" + artists + "&api_key=24b4aa93fb9c29dedfbb4977c6bb8cf4&format=json"
 
   $.ajax({
     url: queryURL,

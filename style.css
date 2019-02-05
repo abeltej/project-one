@@ -1,7 +1,13 @@
 .jumbotron {
-    background-image: url("jumbotron_bg.jpg");
+    background-image: url("/Users/user/Desktop/pexels-photo-1100538.jpeg");
     background-size: cover;
   }
+
+  /* body{
+
+    background-image: url("//Users/user/Desktop/pexels-photo-1100538.jpeg");
+
+  } */
 
 #icon{
     position: relative;
