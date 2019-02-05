@@ -1,6 +1,7 @@
 .jumbotron {
     background-image: url("/Users/user/Desktop/pexels-photo-1100538.jpeg");
     background-size: cover;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   /* body{
@@ -8,6 +9,12 @@
     background-image: url("//Users/user/Desktop/pexels-photo-1100538.jpeg");
 
   } */
+
+  .container    {
+
+    margin-right: 600px;
+
+  }
 
 #icon{
     position: relative;
