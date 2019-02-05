@@ -81,10 +81,7 @@ function concertInfo(artists) {
       var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);
       var eventDates = $("<h6>").text(response._embedded.events[i].dates.start.localDate);
       var eventName = $("<h6>").text(response._embedded.events[i].name);
-      var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets");
-      // var eventDiv = $("#cBlockOne").append("<div>");
-
-      // $(eventDiv).attr("class=border border-info");
+      var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets & Info");
       var eventDiv = $("<div>").appendTo("#cBlockOne").append(eventCity, eventDates, eventName, eventURL);
       $(eventDiv).attr("class", "border border-dark eventDiv text-center");
     }
