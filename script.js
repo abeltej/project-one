@@ -86,7 +86,7 @@ function concertInfo(artists) {
     console.log(response);
     $("#concerts").empty();
 
-    for (var i = 0; i++ < 4;) {
+    for (var i = 0; i < response._embedded.events.length; i++) {
       console.log("loop")
 
       var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);
