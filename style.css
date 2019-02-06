@@ -92,3 +92,8 @@ img {
     margin-right: 43%;
     bottom: 0px;    
 }
+
+.scrollBox{
+    height:500px;
+  overflow-y: scroll;
+}
