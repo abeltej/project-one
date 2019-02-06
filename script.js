@@ -69,7 +69,7 @@ function concertInfo(artists) {
 
   }).then(function (response) {
     // console.log(response);
-    $("#concerts").empty();
+    $("#cBlockOne").empty();
 
     for (var i = 0; i++ < 4;) {
       // console.log("loop")
