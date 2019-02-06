@@ -44,7 +44,7 @@ function artistInfo(artists) {
     var artistName = $("<h1>").text(response.artist.name);
     var artistURL = $("<a>").attr(response.artist).append(artistName);
     var artistBio = $("<h3>").text(response.artist.bio.summary);
-    var artistImage = $("<img>").attr("src", response.artist.image[3]["#text"]);
+    var artistImage = $("<img>").attr("src", response.artist.image[2]["#text"]);
     // var upcomingEvents = $("<h4>").text(response.artist.ontour + " Upcoming Events");
     // var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
 
@@ -89,7 +89,7 @@ function concertInfo(artists) {
     console.log(response);
     $("#concerts").empty();
 
-    for (var i = 0; i++ < 4;) {
+    for (var i = 0; i++ < 7;) {
       console.log("loop")
 
       var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);
