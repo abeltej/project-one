@@ -28,7 +28,19 @@
     <div class="container">
         <form>
             <div class="form-row" id="searchBar">
-                <div class="col">
+
+                <div class="col-10">
+                    <i class="fas fa-search" id="icon"></i>
+                    <input id="search" type="text" class="form-control input-lg" placeholder="Artist">
+                    <button class="btn btn-outline-dark" id="submit" type="search">Submit</button>
+
+
+                </div>
+
+
+
+
+                <!-- <div class="col">
                     <i class="fas fa-search" id="icon"></i>
                 </div>
                 <div class="col-10">
@@ -38,7 +50,7 @@
                 </div>
                 <div class="col-1">
                     <button class="btn btn-outline-dark" id="submit" type="search">Submit</button>
-                </div>
+                </div> -->
             </div>
             <div class="row">
                 <div class="col-12">
@@ -49,30 +61,32 @@
 
 
         <div class="row">
-            <div class="col-9" id="cBlockTwo">
-
-            </div>
-            
-            <div class="col-3" id="cBlockOne">
-    
-            </div>
-        </div>
-        
-        <div class="row">
             <div class="col-9">
                 <div class="row">
-                    <div class="vidWindow">
-                        <iframe id="testing" height="400px" width="700px" 
-                        frameborder="0" marginheight="20" marginwidth="35" 
-                        scrolling="auto" src="https://www.youtube.com/embed/"
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                            allowfullscreen></iframe>
+                    <!-- <div class="col-1" ></div> -->
+                    <div class="col-4">
+                        <div id="artistImage"></div>
                     </div>
-                    <div class="row">
-                        <div class="col-9">
-                            <div class="spacerDiv"></div>
+                    <div class="col-1"></div>
+                    <div class="col-4 mx-auto">
+                        <div id="artistText"></div>
+                    </div>
+                    <div class="col-1"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="vidWindow">
+                            <iframe id="testing" height="350px" width="550px" frameborder="0" marginheight="20"
+                                marginwidth="35" scrolling="auto" src="https://www.youtube.com/embed/" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div id="concerts">
+
                 </div>
             </div>
         </div>

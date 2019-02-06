@@ -62,8 +62,10 @@ function artistInfo(artists) {
     // var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
 
     // Empty the contents of the artist-div, append the new artist content
-    $("#cBlockTwo").empty();
-    $("#cBlockTwo").append(artistURL, artistImage, artistBio);
+    $("#artistText").empty();
+    $("#artistImage").empty();
+    $("#artistText").append(artistName, artistURL, artistBio);
+    $("#artistImage").append(artistImage);
   });
 }
 
@@ -100,7 +102,7 @@ function concertInfo(artists) {
 
   }).then(function (response) {
     console.log(response);
-    $("#cBlockOne").empty();
+    $("#concerts").empty();
 
     for (var i = 0; i++ < 7;) {
       console.log("loop")
@@ -109,8 +111,8 @@ function concertInfo(artists) {
       var eventDates = $("<h6>").text(response._embedded.events[i].dates.start.localDate);
       var eventName = $("<h6>").text(response._embedded.events[i].name);
       var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets & Info");
-      var eventDiv = $("<div>").appendTo("#cBlockOne").append(eventCity, eventDates, eventName, eventURL);
-      $(eventDiv).attr("class", "border border-dark eventDiv text-center");
+      var eventDiv = $("<div>").appendTo("#concerts").append(eventCity, eventDates, eventName, eventURL);
+      $(eventDiv).attr("class", "border border-dark rounded eventDiv text-center");
     }
   });
 }
