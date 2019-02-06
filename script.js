@@ -25,23 +25,10 @@ function youtubeArtist(keyword) {
     $("#testing").attr("src", "https://www.youtube.com/embed/" + videoId);
     console.log(response);
 
-    // console.log(response.items[0].id);
-
-    // Empty the contents of the artist-div, append the new artist content
-    // $("#video-div").empty();
-    // $("#video-div").append(str);
   });
 }
 
   
-
-
-
-// $("#vidWindow").empty();
-// $("#vidWindow").append(str);
-
-// var queryURL = "https://www.googleapis.com/youtube/v3/search?part=snippet&order=rating&type=video&videoDefinition=high&videoEmbeddable=true&key=AIzaSyDlDeXz6hox05IplaBivh2Owr3tnDzfFaE";
-
 
 
 
@@ -62,10 +49,8 @@ function artistInfo(artists) {
     // var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
 
     // Empty the contents of the artist-div, append the new artist content
-    $("#artistText").empty();
-    $("#artistImage").empty();
-    $("#artistText").append(artistName, artistURL, artistBio);
-    $("#artistImage").append(artistImage);
+    $("#cBlockTwo").empty();
+    $("#cBlockTwo").append(artistURL, artistImage, artistBio);
   });
 }
 
@@ -104,14 +89,14 @@ function concertInfo(artists) {
     console.log(response);
     $("#concerts").empty();
 
-    for (var i = 0; i++ < 7;) {
+    for (var i = 0; i++ < 4;) {
       console.log("loop")
 
       var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);
       var eventDates = $("<h6>").text(response._embedded.events[i].dates.start.localDate);
       var eventName = $("<h6>").text(response._embedded.events[i].name);
       var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets & Info");
-      var eventDiv = $("<div>").appendTo("#concerts").append(eventCity, eventDates, eventName, eventURL);
+      var eventDiv = $("<div>").appendTo("#cBlockOne").append(eventCity, eventDates, eventName, eventURL);
       $(eventDiv).attr("class", "border border-dark rounded eventDiv text-center");
     }
   });

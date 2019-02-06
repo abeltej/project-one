@@ -1,60 +1,60 @@
 .jumbotron {
-    background-image: url("headphone-silhouette-27463-1920x1200.jpg");
-    background-size: 800%;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-  }
+    background-image: url("817326.jpg");    
+}
 
 body{
 
-    background-image: url("headphone-silhouette-27463-1920x1200.jpg");
+    background-image: url("817326.jpg");
     background-size: 125%;
     font-family: Arial, Helvetica, sans-serif;
+}
 
-  }
-
-  .jumbotron h1{
-
-    text-align: center;
-    font-size: 35px;
-    font-weight: bold;
-
-  }
-
-  .lead {
+.lead {
 
     text-align: center;
     font-size: 25px;
-    font-weight: bold;
-
-  }
-
-#icon{
-    /* position: relative;
-    float: right;
-    top: 10px; */
+    margin-top: 100px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+#icon{
+    position: relative;
+    float: right;
+    top: 10px;
+    color: white;
+}
+
+h1  {
+
+    font-size: 40px;
+    color: lightgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+
+}
+
+h3, h5, h6  {
+
+    color:lightgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
 
 h3{
-font-size: 20px;
-margin-top: 20px;
-
+    margin-top: 20px;
 }
 
 #search {
 
-    /* margin: auto; */
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .eventDiv{
-margin-top: 8px;
-margin-bottom: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px;
 
-}
-#ik_player_iframe  {
-    margin-left: 70px;
-    margin-top: 20px;
 }
 
 .spacerDiv{
@@ -62,9 +62,8 @@ margin-bottom: 8px;
 }
 
 .vidWindow {
-    align-content: left;
-    /* margin-left: 100px; */
-
+    align-content: center;
+    margin-left: 100px;
 }
 
 iframe {
@@ -75,11 +74,30 @@ iframe {
     border-radius: 12px;
     -moz-box-shadow: 4px 4px 14px #000;
     -webkit-box-shadow: 4px 4px 14px #000;
-    box-shadow: 4px 4px 14px #000;
-   
-    } 
+    box-shadow: 4px 4px 14px #000;   
+} 
 
 img {
     float: left;
-    /* display: inline-block; */
+}
+
+#cBlockOne  {
+
+    border-radius:  15px;
+    border-style: solid;
+    background-color: rgb(9, 43, 56);
+}
+
+#cBlockTwo  {
+
+    background-color: rgb(9, 43, 56);
+    border-style: solid;
+    border-radius:  15px;
+}
+
+.pull-right {
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
