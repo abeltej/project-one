@@ -71,8 +71,8 @@ function concertInfo(artists) {
     // console.log(response);
     $("#cBlockOne").empty();
 
-    for (var i = 0; i++ < 4;) {
-      // console.log("loop")
+    for (var i = 0; i < response._embedded.events.length; i++) {
+      console.log("loop")
 
       var eventCity = $("<h5>").text(response._embedded.events[i]._embedded.venues[0].city.name);
       var eventDates = $("<h6>").text(response._embedded.events[i].dates.start.localDate);
