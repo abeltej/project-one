@@ -42,15 +42,12 @@ function artistInfo(artists) {
   }).then(function (response) {
     console.log(response);
     var artistName = $("<h1>").text(response.artist.name);
-    var artistURL = $("<a>").attr(response.artist).append(artistName);
+    var artistURL = $("<a>").attr("href", response.artist.bio.url).text("More Info");
     var artistBio = $("<h3>").text(response.artist.bio.summary);
     var artistImage = $("<img>").attr("src", response.artist.image[3]["#text"]);
-    // var upcomingEvents = $("<h4>").text(response.artist.ontour + " Upcoming Events");
-    // var goToArtist = $("<a>").attr("href", response.artist.url).text("See Tour Dates");
-
-    // Empty the contents of the artist-div, append the new artist content
+   
     $("#cBlockTwo").empty();
-    $("#cBlockTwo").append(artistURL, artistImage, artistBio);
+    $("#cBlockTwo").append(artistName, artistURL, artistImage, artistBio);
   });
 }
 
