@@ -29,8 +29,8 @@ body  {
 h3, h5, h6  {
 
     color:lightgrey;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px; */
 }
 
 h3{
