@@ -2,11 +2,7 @@ $(document).ready(function () {
 
   $('.vidWindow').hide();
 
-  $('#submit').click(function () {
-
-    $('.vidWindow').show();
-
-  });
+ 
 });
 
 
@@ -31,13 +27,8 @@ function youtubeArtist(keyword) {
 
   });
 }
-$("#submit").on("click", function (event) {
-  event.preventDefault();
-  var inputArtist = $("#search").val().trim();
 
-  youtubeArtist(inputArtist);
-
-});
+  
 
 
 
@@ -68,8 +59,18 @@ $("#submit").on("click", function (event) {
   event.preventDefault();
   var inputArtist = $("#search").val().trim();
 
-  artistInfo(inputArtist);
-  concertInfo(inputArtist)
+  var validation = validator.isEmpty(inputArtist);
+
+  if (validation === false) {
+    $('.vidWindow').show();
+    artistInfo(inputArtist);
+    concertInfo(inputArtist);
+    youtubeArtist(inputArtist);
+    
+    console.log("true");
+  }
+
+
 });
 
 
@@ -86,7 +87,7 @@ function concertInfo(artists) {
 
   }).then(function (response) {
     console.log(response);
-    $("#cBlockOne").empty();
+    $("#concerts").empty();
 
     for (var i = 0; i++ < 4;) {
       console.log("loop")
@@ -96,7 +97,7 @@ function concertInfo(artists) {
       var eventName = $("<h6>").text(response._embedded.events[i].name);
       var eventURL = $("<a>").attr("href", response._embedded.events[i].url).text("Tickets & Info");
       var eventDiv = $("<div>").appendTo("#cBlockOne").append(eventCity, eventDates, eventName, eventURL);
-      $(eventDiv).attr("class", "border border-dark eventDiv text-center");
+      $(eventDiv).attr("class", "border border-dark rounded eventDiv text-center");
     }
   });
 }
