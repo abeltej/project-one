@@ -17,69 +17,61 @@
 
 <body>
     <header>
-        <div class="jumbotron jumbotron-fluid" id="title">
-            <img src="adajamz.png" class="pull-right">
-            <div class="container width:800px">
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <form>
+        
             <p class="lead">Search simultaneously for Artist info, Performances and Video</p>
             <div class="form-row" id="searchBar">
-
-                <div class="col">
+                
+                <div class="col-2">
                     <i class="fas fa-search" id="icon"></i>
                 </div>
-                <div class="col-10">
-
+                <div class="col-8">
+                    
                     <input id="search" type="text" class="form-control input-lg" placeholder="Artist">
-
+                    
                 </div>
-                <div class="col-1">
+                <div class="col-2">
                     <button class="btn btn-outline-light" id="submit" type="search">Submit</button>
                 </div>
             </div>
+        
+    </header>
+    
+    <div class="container">
+        <form>
             <div class="row">
                 <div class="col-12">
                     <div class="spacerDiv"></div>
                 </div>
             </div>
         </form>
-
-
+        
+        
         <div class="row">
-            <div class="col-lg-10" id="cBlockTwo">
-            </div>
-
-            <div class="col-lg-2" id="cBlockOne">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-10">
                 <div class="row">
-                    <div class="vidWindow">
-                        <iframe id="testing" height="400px" width="1000px" frameborder="0" marginheight="20"
+                    <div class="col-lg-10" id="cBlockTwo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10">
+                        <div class="vidWindow">
+                            <iframe id="testing" height="400px" width="800px" frameborder="0" marginheight="20"
                             marginwidth="35" scrolling="auto" src="https://www.youtube.com/embed/" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                             allowfullscreen></iframe>
-                    </div>
-
-
-
-                    <!-- <div class="row">
-                        <div class="col-9">
-                            <div class="spacerDiv"></div>
                         </div>
                     </div> -->
                 </div>
             </div>
+            
+            <div class="col-lg-2">
+                <div id="cBlockOne"></div>
+            </div>
         </div>
     </div>
-    <!-- </div> -->
-
-
+    
+   <footer img src="adajamz.png" class="pull-right"></footer>
+    
+    
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://apis.google.com/js/api.js"></script>
