@@ -1,5 +1,6 @@
 $(document).ready(function () {
   $('.vidWindow').hide();
+  $(".scrollBox").hide();
 });
 
 // Event handler for user clicking the search-artist button
@@ -12,6 +13,7 @@ $("#submit").on("click", function (event) {
   // if text is entered into search box, perform api call funcitons and show video window
   if (validation === false) {
     $('.vidWindow').show();
+    $(".scrollBox").show();
     artistInfo(inputArtist);
     concertInfo(inputArtist);
     youtubeArtist(inputArtist);
@@ -70,6 +72,7 @@ function concertInfo(artists) {
   }).then(function (response) {
     // console.log(response);
     $("#cBlockOne").empty();
+    
 
     for (var i = 0; i < response._embedded.events.length; i++) {
       console.log("loop")
